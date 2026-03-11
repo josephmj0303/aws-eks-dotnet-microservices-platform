@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: school
+  namespace: dotnet-microservices
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: school
+  template:
+    metadata:
+      labels:
+        app: school
+    spec:
+      containers:
+      - name: school
+        image: josephmj0303/school:latest
+        ports:
+        - containerPort: 5001
+        env:
+        - name: ASPNETCORE_URLS
+          value: "http://+:5001"
+        - name: ConnectionStrings__DefaultConnection
+          valueFrom:
+            secretKeyRef:
+              name: mssql-secret
+              key: connectionstring
+	resources:
+          requests:
+            cpu: "200m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
