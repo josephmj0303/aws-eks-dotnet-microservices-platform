@@ -15,6 +15,8 @@ This project demonstrates how to build, containerize, and deploy a **cloud-nativ
 
 The platform showcases a **production-style DevOps architecture** including CI/CD pipelines, container orchestration, autoscaling, ingress routing, infrastructure as code, and observability.
 
+📘 **Deployment guide:** See `docs/deployment-guide.md` for step-by-step infrastructure provisioning and Kubernetes deployment instructions.
+
 ---
 
 # Architecture Overview
