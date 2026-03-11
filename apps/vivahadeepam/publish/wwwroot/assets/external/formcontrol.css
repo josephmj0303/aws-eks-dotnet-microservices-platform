@@ -1,0 +1,611 @@
+.external-textbox {
+    background-color: #ffffff3a !important;
+    border-color: #d5d4d2;
+    height: 40px !important;
+    padding: 7px 18px !important;
+    border-radius: 4px !important;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn-auto-outline {
+    outline: auto;
+    outline-color: #e5e5e5;
+}
+
+.input-group-addon {
+    background-color: #fff !important;
+    border: 0px solid #fff !important;
+}
+
+.Active-Row {
+    background-color: #ededed !important;
+    font-weight: 600;
+}
+
+.Active-Student-Row {
+    background-color: #ededed !important;
+    font-weight: 600;
+}
+
+.table-hover > tbody > tr:hover, .table > tbody > tr.active > td, .table > tbody > tr.active > th, .table > tbody > tr > td.active, .table > tbody > tr > th.active, .table > tfoot > tr.active > td, .table > tfoot > tr.active > th, .table > tfoot > tr > td.active, .table > tfoot > tr > th.active, .table > thead > tr.active > td, .table > thead > tr.active > th, .table > thead > tr > td.active, .table > thead > tr > th.active {
+    background-color: #ededed !important;
+    cursor: pointer !important;
+    font-weight: 600;
+}
+
+
+/* ==== */
+/* Text With Media Responsive Styles */
+@media screen and (max-width: 640px) {
+    #gritter-notice-wrapper {
+        position: fixed;
+        top: 20px;
+        left: 0px;
+        right: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+}
+
+.btn.btn-rounded {
+    border-radius: 50px
+}
+
+
+
+/* ==== */
+/* Text With Media Responsive Styles */
+@media screen and (min-width: 300px) {
+    .class-main img {
+        border-radius: 50%;
+        margin-bottom: 0px !important;
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .navbar-container select {
+        border-radius: 0;
+        box-shadow: none !important;
+        color: #ffffff;
+        background-color: #151c30;
+        border: 1px solid #151c30;
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+
+    .class-main img {
+        border-radius: 50%;
+        margin-bottom: 20px !important;
+        width: 90px !important;
+        height: 90px !important;
+    }
+
+    .navbar-container select {
+        border-radius: 0;
+        box-shadow: none !important;
+        color: #858585;
+        background-color: #fff;
+        border: 1px solid #d5d5d5;
+    }
+}
+
+.btn-AddIcon {
+    font-size: 10px;
+    border-radius: 100%;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    width: 50px !important;
+    height: 50px !important;
+    line-height: 54px !important;
+    padding: 4px 14px;
+    box-shadow: 0 2px 16px #333;
+}
+
+.btn-MenuIcon {
+    font-size: 20px;
+    border-radius: 100%;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    width: 75px !important;
+    height: 75px !important;
+    line-height: 75px !important;
+    padding: 4px 14px;
+}
+
+.btn-CircleIcon {
+    font-size: 10px;
+    border-radius: 100%;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 39px !important;
+    padding: 4px 7px;
+}
+
+.btn-ProfileBtnIcon {
+    border-radius: 100%;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    width: 60px !important;
+    height: 60px !important;
+    line-height: 60px !important;
+}
+
+
+.background-gradient {
+    background: linear-gradient(#4fb16c, #4fb16c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.boxeffect {
+    box-shadow: 0 2px 5px 0 #bdbdbdad, 0 2px 10px 0 #bdbdbda6
+}
+
+
+@media screen and (min-width: 600px) {
+    .boxeffectfordesktop {
+        box-shadow: 0 2px 5px 0 #bdbdbdad, 0 2px 10px 0 #bdbdbda6
+    }
+}
+
+
+.reset-this * {
+    animation: none;
+    animation-delay: 0;
+    animation-direction: normal;
+    animation-duration: 0;
+    animation-fill-mode: none;
+    animation-iteration-count: 1;
+    animation-name: none;
+    animation-play-state: running;
+    animation-timing-function: ease;
+    background: 0;
+    background-attachment: scroll;
+    background-color: transparent;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-position-x: 0;
+    background-position-y: 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border: 0;
+    border-style: none;
+    border-width: medium;
+    border-color: inherit;
+    border-bottom: 0;
+    border-bottom-color: inherit;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-collapse: separate;
+    border-image: none;
+    border-left: 0;
+    border-left-color: inherit;
+    border-left-style: none;
+    border-left-width: medium;
+    border-radius: 0;
+    border-right: 0;
+    border-right-color: inherit;
+    border-right-style: none;
+    border-right-width: medium;
+    border-spacing: 0;
+    border-top: 0;
+    border-top-color: inherit;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-style: none;
+    border-top-width: medium;
+    bottom: auto;
+    box-shadow: none;
+    box-sizing: content-box;
+    caption-side: top;
+    clear: none;
+    clip: auto;
+    color: inherit;
+    columns: auto;
+    column-count: auto;
+    column-fill: balance;
+    column-gap: normal;
+    column-rule: medium none currentColor;
+    column-rule-color: currentColor;
+    column-rule-style: none;
+    column-rule-width: none;
+    column-span: 1;
+    column-width: auto;
+    content: normal;
+    counter-increment: none;
+    counter-reset: none;
+    cursor: auto;
+    direction: ltr;
+    display: inline;
+    empty-cells: show;
+    float: none;
+    font: normal;
+    font-family: inherit;
+    font-size: medium;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: auto;
+    left: auto;
+    letter-spacing: normal;
+    line-height: normal;
+    list-style: none;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: disc;
+    margin: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    max-height: none;
+    max-width: none;
+    min-height: 0;
+    min-width: 0;
+    opacity: 1;
+    orphans: 0;
+    outline: 0;
+    outline-color: invert;
+    outline-style: none;
+    outline-width: medium;
+    overflow: visible;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    page-break-after: auto;
+    page-break-before: auto;
+    page-break-inside: auto;
+    perspective: none;
+    perspective-origin: 50% 50%;
+    position: static;
+    /* May need to alter quotes for different locales (e.g fr) */
+    quotes: '\201C' '\201D' '\2018' '\2019';
+    right: auto;
+    tab-size: 8;
+    table-layout: auto;
+    text-align: inherit;
+    text-align-last: auto;
+    text-decoration: none;
+    text-decoration-color: inherit;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-indent: 0;
+    text-shadow: none;
+    text-transform: none;
+    top: auto;
+    transform: none;
+    transform-style: flat;
+    transition: none;
+    transition-delay: 0s;
+    transition-duration: 0s;
+    transition-property: none;
+    transition-timing-function: ease;
+    unicode-bidi: normal;
+    vertical-align: baseline;
+    visibility: visible;
+    white-space: normal;
+    widows: 0;
+    width: auto;
+    word-spacing: normal;
+    z-index: auto;
+    /* basic modern patch */
+    all: initial;
+    all: unset;
+}
+
+/* basic modern patch */
+
+#reset-this-root {
+    all: initial;
+}
+
+@media screen and (max-width: 600px) {
+    .fixed-position {
+        margin-top: 2em;
+        position: fixed;
+        z-index: 1001;
+        right: 0px;
+        bottom: 16%;
+    }
+
+    #top-menu {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .fixed-position {
+        margin-top: 2em;
+        position: fixed;
+        z-index: 1001;
+        right: 0px;
+        bottom: 10%;
+    }
+
+    #top-menu {
+        width: 30%;
+    }
+}
+
+.Highlighted {
+    background-color: yellow !important;
+    font-weight: 600;
+    color: red;
+}
+
+
+.Editable {
+    background-color: #ffeb3b26 !important;
+    font-weight: 600;
+    color: black;
+    border-bottom: 2px solid #4fb16c !important;
+}
+
+#tbdReceiptDetails > tr > td {
+    border: 1.8px solid green !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
+
+#tbfReceiptDetails > tr > th {
+    border: 1.8px solid green !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
+
+.box-effect {
+    box-shadow: 0 2px 5px 0 #8a888861, 0 2px 10px 0 #8a8888a3;
+}
+
+
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+    .menu-card:hover {
+        transform: scale(1.05);
+    }
+
+.mail-tab img {
+    width: 70px; /* Adjust Image Size */
+    height: 70px;
+}
+
+.menu-card-title {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+
+
+.table-container {
+    max-width: 800px;
+    margin: 18px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background-color: #4fb16c;
+    color: white;
+    text-align: center;
+}
+
+.match-yes {
+    color: green;
+    font-weight: bold;
+}
+
+.match-no {
+    color: red;
+    font-weight: bold;
+}
+
+.profile-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+    .profile-card img {
+        width: 100%;
+        max-width: 180px;
+        height: auto;
+        max-height: 230px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+.profile-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.horoscope-chart {
+    display: flex;
+    gap: 15px;
+}
+
+    .horoscope-chart table {
+        width: 120px;
+        height: 120px;
+        border-collapse: collapse;
+    }
+
+    .horoscope-chart th {
+        border: 3px solid #ccc;
+        text-align: center;
+        padding: 12px;
+        height: 81px;
+        width: 72px;
+        min-height: 92px;
+        min-width: 113px;
+    }
+
+    .horoscope-chart td {
+        border: 3px solid #ccc;
+        text-align: center;
+        padding: 12px;
+        height: 81px;
+        width: 68px;
+        min-height: 92px;
+        min-width: 100px;
+    }
+
+
+
+.horoscope-entry-chart td {
+    border: 3px solid #ccc;
+    text-align: center;
+    padding: 0px;
+    height: 122px;
+    min-height: 122px;
+    max-height: 122px;
+    min-width: 177px;
+    max-width: 177px;
+    text-overflow: ellipsis;
+}
+
+.horoscope-print-chart td {
+    border: 3px solid #25195b;
+    text-align: center;
+    padding: 12px;
+    height: 72px;
+    width: 66px;
+    min-height: 89px;
+    min-width: 99px;
+}
+
+.horoscope-fullprint-chart td {
+    /*  border: 2px solid #25195b;
+    text-align: center;
+    padding: 12px;
+    height: 72px;
+    width: 66px;
+    min-height: 89px;
+    min-width: 85px;*/
+
+    border: 2px solid #25195b;
+    text-align: center;
+    padding: 2px;
+    height: 59px;
+    width: 34px;
+    font-size: 13px;
+}
+
+.profile-info h5 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 1.6rem;
+    margin: 5px 0;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+
+td[contenteditable="true"]:empty:before {
+    content: attr(data-placeholder);
+    color: gray;
+}
+
+.HoroscopePrintNew table {
+    width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-color: #f7d943;
+}
+
+.HoroscopePrintNew td {
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+    /*border-bottom: 1px dashed #f7d943 !important;*/
+}
+
+    .HoroscopePrintNew td:nth-child(1) {
+        color: #fd0200;
+    }
+
+    .HoroscopePrintNew td:nth-child(2) {
+        color: #06920b;
+    }
+/* Ensures the content fits on the A4 page */
+/*@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .HoroscopePrintNew table {
+        width: 100%;
+    }
+
+    .HoroscopePrintNew td {
+        padding: 8px;
+    }
+
+    .HoroscopePrintNew .no-print {
+        display: none;
+    }
+
+    .HoroscopePrintNew .padge-break {
+        page-break-before: always;
+    }
+}*/
+.HoroscopePrintNew h1 {
+    line-height: 21.5px;
+}
+
+.line-indentation {
+    text-indent: -16px;
+    padding-left: 20px !important;
+}
+
+/*.h5 {
+    font-size: 15px!important;
+}*/
+
+.profile-image {
+    height: 400px !important;
+}

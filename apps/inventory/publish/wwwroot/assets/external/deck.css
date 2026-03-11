@@ -1,0 +1,46 @@
+.blog-container
+{
+    padding-top: 5px;
+    padding-bottom:5px;
+}
+
+.blog-header {
+    padding-top: 10px;
+    padding-bottom:4px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+.blog-title {
+    padding-top: 4px;
+    padding-bottom: 0px;
+}
+
+
+.blog-Content {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.blog-tags {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.blog-body {
+}
+
+.blog-footer {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.Read-More {
+    max-height: 8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Read-Less {
+
+}
