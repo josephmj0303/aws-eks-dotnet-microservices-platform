@@ -1,0 +1,149 @@
+
+.background-image{
+    background-image: url("../../Images/Background/background.jpg");
+    height: auto;
+}
+
+ /* classes for dragged stuff */
+ .Image {
+    min-height: 5em;
+    text-align: justify;
+}
+
+.Button {
+    min-height: 3em;
+    text-align: justify;
+}
+
+.Button-image {
+    min-height: 10em;
+    text-align: justify;
+}
+
+
+/* .check
+    {
+        opacity:0.5;
+        color:#81a948 !important;
+    } */
+h4 {
+    line-height: 2.2em;
+}
+
+.readonly {
+    pointer-events: none;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.nopadding3x {
+    padding: 3px !important;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.navbar {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.wrimagecard {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    position: relative;
+    background: #fff;
+    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+    .wrimagecard .fa {
+        position: relative;
+        font-size: 40px;
+    }
+
+.wrimagecard-topimage_header {
+    padding: 13px;
+}
+
+a.wrimagecard:hover, .wrimagecard-topimage:hover {
+    box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.2);
+}
+
+.wrimagecard-topimage a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.wrimagecard-topimage_title {
+    /* padding: 20px 24px;
+height: 80px; */
+    padding-bottom: 0.1rem;
+    /* position: relative; */
+}
+
+.wrimagecard-topimage a {
+    border-bottom: none;
+    text-decoration: none;
+    color: #525c65;
+    transition: color 0.3s ease;
+}
+
+.scorefa {
+    font-size: 1.5em;
+}
+.dragwatermark::after {
+    content: "Drop Here";
+    /*background:url(image/mouse-right-click-icon-4.png); */
+    opacity: 0.2;
+    z-index: -1;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 0.9vw;
+    color: black !important;
+}
+.drag-layout {
+    border: 2px dashed #141b2efa;
+    cursor: pointer;
+    min-height: 18rem;
+}
+#divPatternPreview .box-item {
+            
+            z-index: 1000;
+            
+}
+
+.Fit2Conditor {
+    width: 100%;
+    height: 100%;
+}
+
+.Img300Px {
+    width: 300px;
+    height: 300px;
+}
+
+.Img200Px {
+    width: 200px;
+    height: 200px;
+}
+
+.box-item {
+    font-weight: 600;
+    text-align: center;
+}

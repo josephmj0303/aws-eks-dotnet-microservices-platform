@@ -1,0 +1,267 @@
+[
+  {
+    "outputFileName": "wwwroot/Production/css/main.min.css",
+    "inputFiles": [
+      "wwwroot/assets/css/jquery-ui.min.css",
+      "wwwroot/assets/css/jquery.gritter.min.css",
+      "wwwroot/assets/font-awesome/4.5.0/css/font-awesome.min.css",
+      "wwwroot/assets/font-awesome/font-awesome-animation.css",
+      "wwwroot/assets/css/bootstrap.min.css",
+      "wwwroot/assets/css/bootstrap-timepicker.min.css",
+      "wwwroot/assets/css/bootstrap-colorpicker.min.css",
+      "wwwroot/assets/css/daterangepicker.min.css",
+      "wwwroot/assets/css/daterangepicker.css",
+      "wwwroot/assets/css/FullCalendar/fullcalendar.min.css",
+      "wwwroot/assets/css/FullCalendar/scheduler.min.css",
+      "wwwroot/assets/css/ace.min.css",
+      "wwwroot/assets/css/ace-skins.min.css",
+      "wwwroot/assets/css/ace-rtl.min.css",
+      "wwwroot/assets/css/colorbox.min.css",
+      "wwwroot/assets/css/chosen.min.css",
+      "wwwroot/assets/css/selectize.css",
+      "wwwroot/assets/css/dropzone.min.css",
+      "wwwroot/assets/css/jquery.flipster.css",
+      "wwwroot/assets/external/flipster.css",
+      "wwwroot/assets/css/Editor/editor.css",
+      "wwwroot/assets/css/Preloader/css/main.css",
+      "wwwroot/assets/external/header.css",
+      "wwwroot/assets/external/widget.css",
+      "wwwroot/assets/external/formcontrol.css",
+      "wwwroot/assets/Modules/Home/Home.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/Production/js/main.min.js",
+    "inputFiles": [
+      /* ===== ACE Plugins  ===== */
+      "wwwroot/assets/js/jquery-2.1.4.min.js",
+      "wwwroot/assets/js/bootstrap.min.js",
+      "wwwroot/assets/js/ace.min.js",
+      "wwwroot/assets/js/ace-elements.min.js",
+      "wwwroot/assets/js/bootbox.js",
+      "wwwroot/assets/js/bootstrap-multiselect.min.js",
+      "wwwroot/assets/js/jquery.validate.min.js",
+      "wwwroot/assets/js/jquery-additional-methods.min.js",
+      "wwwroot/assets/js/jquery-ui.min.js",
+      "wwwroot/assets/js/jquery.gritter.min.js",
+      "wwwroot/assets/js/jquery.easypiechart.min.js",
+      "wwwroot/assets/js/wizard.min.js",
+      "wwwroot/assets/js/chosen.jquery.min.js",
+      "wwwroot/assets/js/dropzone.min.js",
+      "wwwroot/assets/js/jquery.colorbox.min.js",
+      "wwwroot/assets/js/bootstrap-wysiwyg.min.js",
+      "wwwroot/assets/js/markdown.min.js",
+      "wwwroot/assets/js/bootstrap-markdown.min.js",
+      "wwwroot/assets/js/jquery.hotkeys.index.min.js",
+      "wwwroot/assets/js/jquery-ui.custom.min.js",
+      "wwwroot/assets/js/bootstrap-datepicker.min.js",
+      "wwwroot/assets/js/bootstrap-timepicker.min.js",
+      "wwwroot/assets/js/moment.min.js",
+      "wwwroot/assets/js/daterangepicker.min.js",
+      "wwwroot/assets/js/bootstrap-colorpicker.min.js",
+      "wwwroot/assets/js/jquery.timeago.js",
+      "wwwroot/assets/js/bootstrap-tag.min.js",
+      "wwwroot/assets/js/jquery.flipster.min.js",
+      "wwwroot/assets/js/Editor/editor.js",
+      "wwwroot/assets/js/tableexport.js",
+      /* ===== Browser Storage  ===== */
+      "wwwroot/Components/WebStorage/WebStorage.js",
+      /* ===== Page PreLoader  ===== */
+      "wwwroot/Components/PageLoader/PageLoader.js",
+      /* ===== GeneralFunction  ===== */
+      "wwwroot/Components/GeneralFunction/GeneralFunction.js",
+      /* ===== Dropdown  ===== */
+      "wwwroot/Components/Dropdown/Dropdown.js",
+      "wwwroot/Components/Dropdown/Master/UserRoles/UserRoles.js",
+      "wwwroot/Components/Dropdown/Master/Nakshatra/Nakshatra.js",
+      "wwwroot/Components/Dropdown/Master/Rasi/Rasi.js",
+
+
+      /* ===== DateRange  ===== */
+      "wwwroot/Components/DateRange/DateRange.js",
+      /* ===== Pagination  ===== */
+      "wwwroot/Components/Pagination/Pagination.js",
+      /* ===== TextEditor  ===== */
+      "wwwroot/Components/TextEditor/Components/Initialize.js",
+      "wwwroot/Components/TextEditor/Components/Accessors.js",
+      /* ===== FileUploader  ===== */
+      "wwwroot/Components/FileUploader/Components/Initialize.js",
+      "wwwroot/Components/FileUploader/Components/Accessors.js",
+      "wwwroot/Components/FileUploader/Components/Actions.js",
+      "wwwroot/Components/FileUploader/Components/Validation.js",
+      "wwwroot/Components/FileUploader/DataControllers/DataControllers.js",
+      /* ===== Routing  ===== */
+      "wwwroot/Components/Routing/Routing.js",
+      /* ===== Layout Configration ===== */
+      "wwwroot/Components/Layout/Layout.js",
+
+      /* ===== Portham Components ===== */
+      "wwwroot/Components/PorthamRules/DinamPortham.js",
+      "wwwroot/Components/PorthamRules/KanapPortham.js",
+      "wwwroot/Components/PorthamRules/MagendiraPortham.js",
+      "wwwroot/Components/PorthamRules/StriTheerkkaPortham.js",
+      "wwwroot/Components/PorthamRules/YoniPorutham.js",
+      "wwwroot/Components/PorthamRules/VedhaPorutham.js",
+      "wwwroot/Components/PorthamRules/VarnaPortham.js",
+      "wwwroot/Components/PorthamRules/RasiPortham.js",
+      "wwwroot/Components/PorthamRules/RasiAthipathiPortham.js",
+      "wwwroot/Components/PorthamRules/RajjuPortham.js",
+      "wwwroot/Components/PorthamRules/NadiPortham.js",
+      "wwwroot/Components/PorthamRules/MaraPortham.js",
+      "wwwroot/Components/PorthamRules/VasiyaPortham.js",
+      "wwwroot/Components/PorthamRules/PakshiPortham.js",
+
+      /* ===== Users  ===== */
+      "wwwroot/Modules/Users/Add/Components/Initialize.js",
+      "wwwroot/Modules/Users/Add/Components/Accessors.js",
+      "wwwroot/Modules/Users/Add/Components/Actions.js",
+      "wwwroot/Modules/Users/Add/Components/Validation.js",
+      "wwwroot/Modules/Users/Add/DataControllers/DataControllers.js",
+      "wwwroot/Modules/Users/Details/Components/Initialize.js",
+      "wwwroot/Modules/Users/Details/Components/Accessors.js",
+      "wwwroot/Modules/Users/Details/Components/Actions.js",
+      "wwwroot/Modules/Users/Details/Components/Pagination.js",
+      "wwwroot/Modules/Users/Details/DataControllers/DataControllers.js",
+      "wwwroot/Modules/Users/Login/Components/Initialize.js",
+      "wwwroot/Modules/Users/Login/Components/Accessors.js",
+      "wwwroot/Modules/Users/Login/Components/Actions.js",
+      "wwwroot/Modules/Users/Login/Components/Validation.js",
+      "wwwroot/Modules/Users/Login/DataControllers/DataControllers.js",
+      /* ===== User Roles  ===== */
+      "wwwroot/Modules/UserRoles/Details/Components/Initialize.js",
+      "wwwroot/Modules/UserRoles/Details/Components/Accessors.js",
+      "wwwroot/Modules/UserRoles/Details/Components/Actions.js",
+      "wwwroot/Modules/UserRoles/Details/Components/Pagination.js",
+      "wwwroot/Modules/UserRoles/Details/DataControllers/DataControllers.js",
+      "wwwroot/Modules/UserRoles/Add/Components/Initialize.js",
+      "wwwroot/Modules/UserRoles/Add/Components/Accessors.js",
+      "wwwroot/Modules/UserRoles/Add/Components/Actions.js",
+      "wwwroot/Modules/UserRoles/Add/Components/Validation.js",
+      "wwwroot/Modules/UserRoles/Add/DataControllers/DataControllers.js",
+      /* ===== User Rights  ===== */
+      "wwwroot/Modules/UserRights/Details/Components/Initialize.js",
+      "wwwroot/Modules/UserRights/Details/Components/Accessors.js",
+      "wwwroot/Modules/UserRights/Details/Components/Validation.js",
+      "wwwroot/Modules/UserRights/Details/Components/Actions.js",
+      "wwwroot/Modules/UserRights/Details/Components/Pagination.js",
+      "wwwroot/Modules/UserRights/Details/DataControllers/DataControllers.js",
+      /* ===== Forms  ===== */
+      "wwwroot/Modules/Forms/Details/Components/Initialize.js",
+      "wwwroot/Modules/Forms/Details/Components/Accessors.js",
+      "wwwroot/Modules/Forms/Details/Components/Actions.js",
+      "wwwroot/Modules/Forms/Details/Components/Pagination.js",
+      "wwwroot/Modules/Forms/Details/DataControllers/DataControllers.js",
+      "wwwroot/Modules/Forms/Add/Components/Initialize.js",
+      "wwwroot/Modules/Forms/Add/Components/Accessors.js",
+      "wwwroot/Modules/Forms/Add/Components/Actions.js",
+      "wwwroot/Modules/Forms/Add/Components/Validation.js",
+      "wwwroot/Modules/Forms/Add/DataControllers/DataControllers.js",
+      /* ===== Organization ===== */
+      "wwwroot/Modules/Organization/Components/Initialize.js",
+      "wwwroot/Modules/Organization/Components/Accessors.js",
+      "wwwroot/Modules/Organization/Components/Actions.js",
+      "wwwroot/Modules/Organization/Components/Validation.js",
+      "wwwroot/Modules/Organization/DataControllers/DataControllers.js",
+      /* ===== Product License ===== */
+      "wwwroot/Modules/ProductLicense/Components/Initialize.js",
+      "wwwroot/Modules/ProductLicense/Components/Accessors.js",
+      "wwwroot/Modules/ProductLicense/Components/Actions.js",
+      "wwwroot/Modules/ProductLicense/Components/Validation.js",
+      "wwwroot/Modules/ProductLicense/DataControllers/DataControllers.js",
+      /* ===== DataBase Backup ===== */
+      "wwwroot/Modules/DataBaseBackup/Details/Components/Initialize.js",
+      "wwwroot/Modules/DataBaseBackup/Details/Components/Accessors.js",
+      "wwwroot/Modules/DataBaseBackup/Details/Components/Actions.js",
+      "wwwroot/Modules/DataBaseBackup/Details/Components/Pagination.js",
+      "wwwroot/Modules/DataBaseBackup/Details/DataControllers/DataControllers.js",
+
+      /* ===== TroubleShoot Components  ===== */
+      "wwwroot/Modules/TroubleShoot/Components/Initialize.js",
+      "wwwroot/Modules/TroubleShoot/Components/Accessors.js",
+      "wwwroot/Modules/TroubleShoot/Components/Actions.js",
+      "wwwroot/Modules/TroubleShoot/Components/Validation.js",
+      "wwwroot/Modules/TroubleShoot/DataControllers/DataControllers.js",
+
+      /* ===== Horoscope Registration Components ===== */
+      "wwwroot/Modules/HoroscopeRegistration/Details/Components/Initialize.js",
+      "wwwroot/Modules/HoroscopeRegistration/Details/Components/Accessors.js",
+      "wwwroot/Modules/HoroscopeRegistration/Details/Components/Validation.js",
+      "wwwroot/Modules/HoroscopeRegistration/Details/Components/Actions.js",
+      "wwwroot/Modules/HoroscopeRegistration/Details/Components/Pagination.js",
+      "wwwroot/Modules/HoroscopeRegistration/Details/DataControllers/DataControllers.js",
+
+      "wwwroot/Modules/HoroscopeRegistration/Add/Components/Initialize.js",
+      "wwwroot/Modules/HoroscopeRegistration/Add/Components/Accessors.js",
+      "wwwroot/Modules/HoroscopeRegistration/Add/Components/Actions.js",
+      "wwwroot/Modules/HoroscopeRegistration/Add/Components/Validation.js",
+      "wwwroot/Modules/HoroscopeRegistration/Add/Components/Pagination.js",
+      "wwwroot/Modules/HoroscopeRegistration/Add/DataControllers/DataControllers.js",
+
+      "wwwroot/Modules/HoroscopeRegistration/Upload/Components/Initialize.js",
+      "wwwroot/Modules/HoroscopeRegistration/Upload/Components/Accessors.js",
+      "wwwroot/Modules/HoroscopeRegistration/Upload/Components/Actions.js",
+      "wwwroot/Modules/HoroscopeRegistration/Upload/Components/Validation.js",
+      "wwwroot/Modules/HoroscopeRegistration/Upload/Components/Pagination.js",
+      "wwwroot/Modules/HoroscopeRegistration/Upload/DataControllers/DataControllers.js",
+
+      /* ===== Horoscope Match Components ===== */
+      "wwwroot/Modules/HoroscopeMatch/Upload/Components/Initialize.js",
+      "wwwroot/Modules/HoroscopeMatch/Upload/Components/Accessors.js",
+      "wwwroot/Modules/HoroscopeMatch/Upload/Components/Actions.js",
+      "wwwroot/Modules/HoroscopeMatch/Upload/Components/Validation.js",
+      "wwwroot/Modules/HoroscopeMatch/Upload/Components/Pagination.js",
+      "wwwroot/Modules/HoroscopeMatch/Upload/DataControllers/DataControllers.js",
+
+      "wwwroot/Modules/HoroscopeMatch/Match/Components/Initialize.js",
+      "wwwroot/Modules/HoroscopeMatch/Match/Components/Accessors.js",
+      "wwwroot/Modules/HoroscopeMatch/Match/Components/Actions.js",
+      "wwwroot/Modules/HoroscopeMatch/Match/Components/Validation.js",
+      "wwwroot/Modules/HoroscopeMatch/Match/DataControllers/DataControllers.js",
+
+      /* ===== Horoscope Profile Components ===== */
+      "wwwroot/Modules/HoroscopeRegistration/HoroscopeProfile/Components/Initialize.js",
+      "wwwroot/Modules/HoroscopeRegistration/HoroscopeProfile/Components/Accessors.js",
+      "wwwroot/Modules/HoroscopeRegistration/HoroscopeProfile/Components/Validation.js",
+      "wwwroot/Modules/HoroscopeRegistration/HoroscopeProfile/Components/Actions.js",
+      "wwwroot/Modules/HoroscopeRegistration/HoroscopeProfile/Components/Pagination.js",
+      "wwwroot/Modules/HoroscopeRegistration/HoroscopeProfile/DataControllers/DataControllers.js",
+
+      /* ===== Profile Matched Horoscope Components ===== */
+      "wwwroot/Modules/HoroscopeRegistration/ProfileMatchHoroscope/Components/Initialize.js",
+      "wwwroot/Modules/HoroscopeRegistration/ProfileMatchHoroscope/Components/Accessors.js",
+      "wwwroot/Modules/HoroscopeRegistration/ProfileMatchHoroscope/Components/Validation.js",
+      "wwwroot/Modules/HoroscopeRegistration/ProfileMatchHoroscope/Components/Actions.js",
+      "wwwroot/Modules/HoroscopeRegistration/ProfileMatchHoroscope/Components/Pagination.js",
+      "wwwroot/Modules/HoroscopeRegistration/ProfileMatchHoroscope/DataControllers/DataControllers.js",
+
+      /* ===== Basic Horoscope Information Components ===== */
+      "wwwroot/Modules/HoroscopeRegistration/Print/BasicInformation/Components/Initialize.js",
+      "wwwroot/Modules/HoroscopeRegistration/Print/BasicInformation/Components/Accessors.js",
+      "wwwroot/Modules/HoroscopeRegistration/Print/BasicInformation/Components/Validation.js",
+      "wwwroot/Modules/HoroscopeRegistration/Print/BasicInformation/Components/Actions.js",
+      "wwwroot/Modules/HoroscopeRegistration/Print/BasicInformation/Components/Pagination.js",
+      "wwwroot/Modules/HoroscopeRegistration/Print/BasicInformation/DataControllers/DataControllers.js",
+
+      /* ===== Full Horoscope Information Components ===== */
+      "wwwroot/Modules/HoroscopeRegistration/Print/FullInformation/Components/Initialize.js",
+      "wwwroot/Modules/HoroscopeRegistration/Print/FullInformation/Components/Accessors.js",
+      "wwwroot/Modules/HoroscopeRegistration/Print/FullInformation/Components/Validation.js",
+      "wwwroot/Modules/HoroscopeRegistration/Print/FullInformation/Components/Actions.js",
+      "wwwroot/Modules/HoroscopeRegistration/Print/FullInformation/Components/Pagination.js",
+      "wwwroot/Modules/HoroscopeRegistration/Print/FullInformation/DataControllers/DataControllers.js",
+
+      /* ===== Dashboard Components ===== */
+      "wwwroot/Modules/Dashboard/Details/Components/Initialize.js",
+      "wwwroot/Modules/Dashboard/Details/Components/Accessors.js",
+      "wwwroot/Modules/Dashboard/Details/Components/Validation.js",
+      "wwwroot/Modules/Dashboard/Details/Components/Actions.js",
+      "wwwroot/Modules/Dashboard/Details/Components/Pagination.js",
+      "wwwroot/Modules/Dashboard/Details/DataControllers/DataControllers.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": false
+  }
+]
