@@ -1,6 +1,5 @@
 # aws-eks-dotnet-microservices-platform
 ![AWS](https://img.shields.io/badge/Cloud-AWS-orange?logo=amazonaws&logoColor=white)
-![EKS](https://img.shields.io/badge/AWS-EKS-orange?logo=amazoneks&logoColor=white)
 ![Terraform](https://img.shields.io/badge/IaC-Terraform-623CE4?logo=terraform&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Orchestration-Kubernetes-326CE5?logo=kubernetes&logoColor=white)
 ![Docker](https://img.shields.io/badge/Container-Docker-2496ED?logo=docker&logoColor=white)
@@ -8,7 +7,7 @@
 ![NGINX](https://img.shields.io/badge/Ingress-NGINX-009639?logo=nginx&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/CI/CD-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)
 ![Microservices](https://img.shields.io/badge/Architecture-Microservices-blue)
-![DevOps](https://img.shields.io/badge/Focus-DevOps-red)
+![EKS](https://img.shields.io/badge/AWS-EKS-orange?logo=amazoneks&logoColor=white)
 
 🚀 **Cloud Native .NET Microservices Platform on Amazon EKS**
 
@@ -38,7 +37,7 @@ The architecture is designed to simulate **real-world DevOps production environm
 Architecture diagram:
 
 ```
-architecture/aws-eks-dotnet-platform-architecture.png
+docs/architecture/aws-eks-dotnet-platform-architecture.png
 ```
 
 ---
@@ -122,9 +121,10 @@ AWS Cloud
 │   │
 │   └── Amazon EKS Worker Nodes
 │        │
-│        ├── Gateway Service Pods
+│        ├── School Service Pods
+│        ├── Inventory Service Pods
 │        ├── Finance Service Pods
-│        └── Orders Service Pods
+│        └── Vivahadeepam Service Pods
 │
 └── Amazon RDS PostgreSQL
 ```
@@ -149,11 +149,13 @@ Namespace: dotnet-platform
 
 Pods
 │
-├── gateway-service
+├── school-service
 │
 ├── finance-service
 │
-├── orders-service
+├── inventory-service
+│
+├── vivahadeepam-service
 │
 └── monitoring stack
      ├── prometheus
@@ -176,20 +178,30 @@ Kubernetes resources used:
 ```
 aws-eks-dotnet-microservices-platform
 │
-├── architecture
-│   └── aws-eks-dotnet-platform-architecture.png
+├── docs
+│   │
+│   ├── architecture
+│   │   └──aws-eks-dotnet-platform-architecture.png
+│   │
+│   └── screenshots
+│       ├── 
+│       └── 
 │
-├── app
+├── apps
 │   │
-│   ├── gateway-service
+│   ├── finance
 │   │   ├── Dockerfile
 │   │   └── published-dll
 │   │
-│   ├── finance-service
+│   ├── school
 │   │   ├── Dockerfile
 │   │   └── published-dll
 │   │
-│   └── orders-service
+│   ├── inventory
+│   │   ├── Dockerfile
+│   │   └── published-dll
+│   │
+│   └── vivahadeepam
 │       ├── Dockerfile
 │       └── published-dll
 │
@@ -197,15 +209,19 @@ aws-eks-dotnet-microservices-platform
 │   │
 │   ├── namespace.yaml
 │   │
-│   ├── gateway
-│   │   ├── deployment.yaml
-│   │   └── service.yaml
-│   │
 │   ├── finance
 │   │   ├── deployment.yaml
 │   │   └── service.yaml
 │   │
-│   ├── orders
+│   ├── school
+│   │   ├── deployment.yaml
+│   │   └── service.yaml
+│   │
+│   ├── inventory
+│   │   ├── deployment.yaml
+│   │   └── service.yaml
+│   │
+│   ├── vivahadeepam
 │   │   ├── deployment.yaml
 │   │   └── service.yaml
 │   │
