@@ -24,7 +24,7 @@ spec:
         - name: ConnectionStrings__DefaultConnection
           valueFrom:
             secretKeyRef:
-              name: vivahadeepam-secret
+              name: vivahadeepamdb-secret
               key: connectionstring
         resources:
           requests:

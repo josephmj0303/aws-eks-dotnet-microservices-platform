@@ -81,7 +81,7 @@ resource "aws_db_instance" "mssql" {
   allocated_storage = 20
 
   username = "dbadmin"
-  password = "mtgSQL@881231"
+  password = "TempPass123!"
 
   port = 1433
 

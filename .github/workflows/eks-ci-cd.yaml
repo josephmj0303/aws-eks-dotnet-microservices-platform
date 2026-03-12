@@ -58,4 +58,4 @@ jobs:
 
     - name: Deploy to EKS
       run: |
-        kubectl apply -f kubernetes/
+        kubectl apply -R -f kubernetes/
