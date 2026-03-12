@@ -24,9 +24,9 @@ spec:
         - name: ConnectionStrings__DefaultConnection
           valueFrom:
             secretKeyRef:
-              name: mssql-secret
+              name: inventorydb-secret
               key: connectionstring
-	resources:
+        resources:
           requests:
             cpu: "200m"
             memory: "256Mi"
