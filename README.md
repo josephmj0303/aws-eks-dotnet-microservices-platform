@@ -183,11 +183,13 @@ aws-eks-dotnet-microservices-platform
 ├── docs
 │   │
 │   ├── architecture
-│   │   └──aws-eks-dotnet-platform-architecture.png
+│   │   └── aws-eks-dotnet-platform-architecture.png
 │   │
 │   └── screenshots
-│       ├── 
-│       └── 
+│       ├── eks-cluster.png
+│       ├── pods-running.png
+│       ├── ingress-access.png
+│       └── grafana-dashboard.png
 │
 ├── apps
 │   │
@@ -207,9 +209,24 @@ aws-eks-dotnet-microservices-platform
 │       ├── Dockerfile
 │       └── published-dll
 │
+├── database
+│   │
+│   ├── backups
+│   │   ├── financedb.bak
+│   │   ├── inventorydb.bak
+│   │   ├── schooldb.bak
+│   │   └── vivahadeepamdb.bak
+│   │
+│   └── restore.sql
+│
 ├── kubernetes
 │   │
 │   ├── namespace.yaml
+│   │
+│   ├── database
+│   │   ├── mssql-statefulset.yaml
+│   │   ├── mssql-service.yaml
+│   │   └── restore-job.yaml
 │   │
 │   ├── finance
 │   │   ├── deployment.yaml
@@ -241,12 +258,11 @@ aws-eks-dotnet-microservices-platform
 │   ├── vpc.tf
 │   ├── eks-cluster.tf
 │   ├── node-group.tf
-│   ├── rds.tf
 │   └── outputs.tf
 │
 ├── .github
 │   └── workflows
-│        └── eks-ci-cd.yml
+│       └── eks-ci-cd.yml
 │
 └── README.md
 ```
