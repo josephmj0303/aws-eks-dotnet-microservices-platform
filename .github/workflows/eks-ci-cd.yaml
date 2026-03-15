@@ -56,6 +56,14 @@ jobs:
       run: |
         aws eks update-kubeconfig --name dotnet-microservices
 
+    - name: Create AWS S3 secret in cluster
+      run: |
+        kubectl create secret generic aws-s3-secret \
+          --from-literal=AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} \
+          --from-literal=AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} \
+          -n dotnet-microservices \
+          	--dry-run=client -o yaml | kubectl apply -f -
+
     - name: Deploy to EKS
       run: |
         kubectl apply -R -f kubernetes/
