@@ -1,0 +1,31 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: mssql-restore
+  namespace: dotnet-microservices
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: restore
+        image: mcr.microsoft.com/mssql-tools
+        command:
+          - /bin/bash
+          - -c
+          - |
+            echo "Waiting for MSSQL to start..."
+            sleep 40
+            /opt/mssql-tools/bin/sqlcmd \
+            -S mssql \
+            -U sa \
+            -P TempPass123! \
+            -i /restore/restore.sql
+        volumeMounts:
+        - name: restore-script
+          mountPath: /restore
+
+      volumes:
+      - name: restore-script
+        configMap:
+          name: mssql-restore-script

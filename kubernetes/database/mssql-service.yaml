@@ -1,0 +1,12 @@
+kapiVersion: v1
+kind: Service
+metadata:
+  name: mssql
+  namespace: dotnet-microservices
+spec:
+  selector:
+    app: mssql
+  ports:
+    - port: 1433
+      targetPort: 1433
+  clusterIP: None
