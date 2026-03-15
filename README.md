@@ -140,8 +140,8 @@ Key infrastructure components:
 * Amazon EKS cluster
 * Managed node groups
 * Application Load Balancer
-• Microsoft SQL Server StatefulSet
-• Persistent storage via EBS gp3
+* Microsoft SQL Server StatefulSet
+* Persistent storage via EBS gp3
 
 ---
 
