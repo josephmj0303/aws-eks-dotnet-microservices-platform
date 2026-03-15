@@ -14,6 +14,37 @@ spec:
       labels:
         app: mssql
     spec:
+
+      initContainers:
+      - name: download-backups
+        image: amazon/aws-cli
+        command:
+          - sh
+          - -c
+          - |
+            echo "Downloading database backups from S3..."
+            aws s3 cp s3://dotnet-sql-backups/ /backup/ --recursive
+
+        env:
+        - name: AWS_ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              name: aws-s3-secret
+              key: AWS_ACCESS_KEY_ID
+
+        - name: AWS_SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: aws-s3-secret
+              key: AWS_SECRET_ACCESS_KEY
+
+        - name: AWS_DEFAULT_REGION
+          value: us-east-1
+        
+        volumeMounts:
+        - name: backup-volume
+          mountPath: /backup
+
       containers:
       - name: mssql
         image: mcr.microsoft.com/mssql/server:2022-latest
@@ -35,8 +66,7 @@ spec:
 
       volumes:
       - name: backup-volume
-        hostPath:
-          path: /data/mssql-backups
+        emptyDir: {}
 
       - name: restore-script
         configMap:
@@ -46,7 +76,9 @@ spec:
   - metadata:
       name: mssql-data
     spec:
-      accessModes: ["ReadWriteOnce"]
+      accessModes: 
+        - ReadWriteOnce
+      storageClassName: gp2
       resources:
         requests:
           storage: 10Gi
