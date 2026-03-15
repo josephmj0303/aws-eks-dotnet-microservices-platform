@@ -128,7 +128,9 @@ AWS Cloud
 │        ├── Finance Service Pods
 │        └── Vivahadeepam Service Pods
 │
-└── Amazon RDS PostgreSQL
+├── Persistent storage via EBS gp3
+│
+└── Microsoft SQL Server StatefulSet
 ```
 
 Key infrastructure components:
@@ -138,7 +140,8 @@ Key infrastructure components:
 * Amazon EKS cluster
 * Managed node groups
 * Application Load Balancer
-* Amazon RDS PostgreSQL
+• Microsoft SQL Server StatefulSet
+• Persistent storage via EBS gp3
 
 ---
 
