@@ -7,6 +7,8 @@ on:
 
 env:
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+  AWS_REGION: us-east-1
+  CLUSTER_NAME: dotnet-microservices
 
 jobs:
 
@@ -22,7 +24,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Docker login
+    - name: Docker Login
       uses: docker/login-action@v3
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
@@ -43,30 +45,96 @@ jobs:
 
     steps:
 
-    - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v4
 
-    - name: Configure AWS
+    - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1
+        aws-region: ${{ env.AWS_REGION }}
+
+    - name: Install kubectl
+      uses: azure/setup-kubectl@v4
+
+    - name: Install Helm
+      uses: azure/setup-helm@v4
 
     - name: Update kubeconfig
       run: |
-        aws eks update-kubeconfig --name dotnet-microservices
+        aws eks update-kubeconfig \
+          --region $AWS_REGION \
+          --name $CLUSTER_NAME
 
-    - name: Create AWS S3 secret in cluster
+# -----------------------------
+# Install Cluster Addons
+# -----------------------------
+
+    - name: Install AWS Load Balancer Controller
+      run: |
+        helm repo add eks https://aws.github.io/eks-charts
+        helm repo update
+
+        helm upgrade --install aws-load-balancer-controller eks/aws-load-balancer-controller \
+          -n kube-system \
+          --set clusterName=$CLUSTER_NAME \
+          --set serviceAccount.create=true \
+          --set region=$AWS_REGION \
+          --set vpcId=$(aws eks describe-cluster \
+            --name $CLUSTER_NAME \
+            --query "cluster.resourcesVpcConfig.vpcId" \
+            --output text)
+
+    - name: Install Metrics Server
+      run: |
+        helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server
+        helm repo update
+
+        helm upgrade --install metrics-server metrics-server/metrics-server \
+          -n kube-system \
+          --set args="{--kubelet-insecure-tls}"
+
+# -----------------------------
+# Base Kubernetes Resources
+# -----------------------------
+
+    - name: Create Namespace
+      run: |
+        kubectl apply -f kubernetes/namespace.yaml
+
+    - name: Create AWS S3 Secret
       run: |
         kubectl create secret generic aws-s3-secret \
           --from-literal=AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} \
           --from-literal=AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} \
           -n dotnet-microservices \
-          	--dry-run=client -o yaml | kubectl apply -f -
+          --dry-run=client -o yaml | kubectl apply -f -
 
-    - name: Deploy to EKS
+# -----------------------------
+# Deploy Application
+# -----------------------------
+
+    - name: Deploy Kubernetes Secrets
       run: |
-        kubectl apply -f kubernetes/namespace.yaml
         kubectl apply -f kubernetes/secrets/
+    
+    - name: Deploy Storage
+      run: |
+        kubectl apply -f kubernetes/storage/
+
+    - name: Deploy Database
+      run: |
         kubectl apply -f kubernetes/database/
+
+    - name: Deploy Microservices
+      run: |
         kubectl apply -R -f kubernetes/
+
+    - name: Verify Deployment
+      run: |
+        kubectl get pods -n dotnet-microservices
+        kubectl get svc -n dotnet-microservices
+        kubectl get ingress -n dotnet-microservices
+
+

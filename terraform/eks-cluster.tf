@@ -13,6 +13,12 @@ module "eks" {
 
   enable_irsa = true
 
+  cluster_addons = {
+    aws-ebs-csi-driver = {
+      most_recent = true
+    }
+  }
+
   eks_managed_node_groups = {
     default = {
       instance_types = ["t3.medium"]
