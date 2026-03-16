@@ -54,7 +54,10 @@ spec:
         - name: ACCEPT_EULA
           value: "Y"
         - name: SA_PASSWORD
-          value: "TempPass123!"
+          valueFrom:
+            secretKeyRef:
+              name: mssql-secret
+              key: SA_PASSWORD
         volumeMounts:
         - name: mssql-data
           mountPath: /var/opt/mssql

@@ -103,6 +103,41 @@ jobs:
       run: |
         kubectl apply -f kubernetes/namespace.yaml
 
+    - name: Create MSSQL Secret
+      run: |
+        kubectl create secret generic mssql-secret \
+          --from-literal=SA_PASSWORD=${{ secrets.MSSQL_SA_PASSWORD }} \
+          -n dotnet-microservices \
+          --dry-run=client -o yaml | kubectl apply -f -
+
+    - name: Create Finance DB Secret
+      run: |
+        kubectl create secret generic financedb-secret \
+          --from-literal=connectionstring="Server=mssql;Database=financedb;User Id=sa;Password=${{ secrets.MSSQL_SA_PASSWORD }};TrustServerCertificate=True" \
+          -n dotnet-microservices \
+          --dry-run=client -o yaml | kubectl apply -f -
+
+    - name: Create Inventory DB Secret
+      run: |
+        kubectl create secret generic inventorydb-secret \
+          --from-literal=connectionstring="Server=mssql;Database=inventorydb;User Id=sa;Password=${{ secrets.MSSQL_SA_PASSWORD }};TrustServerCertificate=True" \
+          -n dotnet-microservices \
+          --dry-run=client -o yaml | kubectl apply -f -
+
+    - name: Create School DB Secret
+      run: |
+        kubectl create secret generic schooldb-secret \
+          --from-literal=connectionstring="Server=mssql;Database=schooldb;User Id=sa;Password=${{ secrets.MSSQL_SA_PASSWORD }};TrustServerCertificate=True" \
+          -n dotnet-microservices \
+          --dry-run=client -o yaml | kubectl apply -f -
+
+    - name: Create Vivahadeepam DB Secret
+      run: |
+        kubectl create secret generic vivahadeepamdb-secret \
+          --from-literal=connectionstring="Server=mssql;Database=vivahadeepamdb;User Id=sa;Password=${{ secrets.MSSQL_SA_PASSWORD }};TrustServerCertificate=True" \
+          -n dotnet-microservices \
+          --dry-run=client -o yaml | kubectl apply -f -
+
     - name: Create AWS S3 Secret
       run: |
         kubectl create secret generic aws-s3-secret \
@@ -115,10 +150,6 @@ jobs:
 # Deploy Application
 # -----------------------------
 
-    - name: Deploy Kubernetes Secrets
-      run: |
-        kubectl apply -f kubernetes/secrets/
-    
     - name: Deploy Storage
       run: |
         kubectl apply -f kubernetes/storage/
