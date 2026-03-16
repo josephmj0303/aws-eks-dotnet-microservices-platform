@@ -90,11 +90,13 @@ jobs:
       run: |
         kubectl rollout status deployment/aws-load-balancer-controller -n kube-system --timeout=180s
 
-        kubectl wait \
-          --for=jsonpath='{.subsets[*].addresses[*].ip}' \
-          endpoints/aws-load-balancer-webhook-service \
-          -n kube-system \
-          --timeout=180s
+        echo "Waiting for webhook endpoints..."
+        until kubectl get endpoints aws-load-balancer-webhook-service -n kube-system -o jsonpath='{.subsets[0].addresses[0].ip}' 2>/dev/null; do
+          echo "Webhook endpoints not ready yet..."
+          sleep 5
+        done
+
+        echo "Webhook endpoints ready"
 
     - name: Install Metrics Server
       run: |
