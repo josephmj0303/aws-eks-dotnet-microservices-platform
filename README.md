@@ -150,7 +150,7 @@ Key infrastructure components:
 All services are deployed within a Kubernetes namespace.
 
 ```
-Namespace: dotnet-platform
+Namespace: dotnet-microservices
 
 Pods
 │
