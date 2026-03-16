@@ -86,9 +86,14 @@ jobs:
             --query "cluster.resourcesVpcConfig.vpcId" \
             --output text)
 
-    - name: Wait for AWS Load Balancer Controller
+    - name: Wait for AWS Load Balancer Controller Webhook
       run: |
-        kubectl rollout status deployment/aws-load-balancer-controller -n kube-system --timeout=120s
+        kubectl wait --for=condition=Available deployment/aws-load-balancer-controller -n kube-system --timeout=180s
+
+        until kubectl get endpoints aws-load-balancer-webhook-service -n kube-system | grep -q ":443"; do
+          echo "Waiting for webhook endpoints..."
+          sleep 10
+        done
 
     - name: Install Metrics Server
       run: |
