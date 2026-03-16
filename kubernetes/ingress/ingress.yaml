@@ -7,13 +7,14 @@ metadata:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-
 spec:
+  ingressClassName: alb
   rules:
-  - http:
-      paths:
 
-      - path: /finance
+  - host: finance.joedevopslab.xyz
+    http:
+      paths:
+      - path: /
         pathType: Prefix
         backend:
           service:
@@ -21,7 +22,10 @@ spec:
             port:
               number: 80
 
-      - path: /school
+  - host: school.joedevopslab.xyz
+    http:
+      paths:
+      - path: /
         pathType: Prefix
         backend:
           service:
@@ -29,7 +33,10 @@ spec:
             port:
               number: 80
 
-      - path: /inventory
+  - host: inventory.joedevopslab.xyz
+    http:
+      paths:
+      - path: /
         pathType: Prefix
         backend:
           service:
@@ -37,7 +44,10 @@ spec:
             port:
               number: 80
 
-      - path: /vivahadeepam
+  - host: vivahadeepam.joedevopslab.xyz
+    http:
+      paths:
+      - path: /
         pathType: Prefix
         backend:
           service:

@@ -15,6 +15,9 @@ spec:
         app: mssql
     spec:
 
+      securityContext:
+        fsGroup: 10001
+
       initContainers:
       - name: download-backups
         image: amazon/aws-cli
@@ -40,7 +43,7 @@ spec:
 
         - name: AWS_DEFAULT_REGION
           value: us-east-1
-        
+
         volumeMounts:
         - name: backup-volume
           mountPath: /backup
@@ -48,6 +51,8 @@ spec:
       containers:
       - name: mssql
         image: mcr.microsoft.com/mssql/server:2022-latest
+        securityContext:
+          runAsUser: 10001
         ports:
         - containerPort: 1433
         env:
@@ -79,7 +84,7 @@ spec:
   - metadata:
       name: mssql-data
     spec:
-      accessModes: 
+      accessModes:
         - ReadWriteOnce
       storageClassName: gp3
       resources:
