@@ -86,6 +86,10 @@ jobs:
             --query "cluster.resourcesVpcConfig.vpcId" \
             --output text)
 
+    - name: Wait for AWS Load Balancer Controller
+      run: |
+        kubectl rollout status deployment/aws-load-balancer-controller -n kube-system --timeout=120s
+
     - name: Install Metrics Server
       run: |
         helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server
