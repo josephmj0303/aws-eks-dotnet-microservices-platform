@@ -13,6 +13,8 @@
 
 This project demonstrates how to build, containerize, and deploy a **cloud-native .NET microservices platform** on **Amazon EKS** using **Docker, Kubernetes, Terraform, and GitHub Actions**.
 
+📘 For step-by-step setup and operations, see the deployment guide: [`docs/deployment-guide.md`](docs/deployment-guide.md).
+
 The platform showcases a **production-style DevOps architecture** including CI/CD pipelines, container orchestration, autoscaling, ingress routing, infrastructure as code, and observability.
 
 ---
