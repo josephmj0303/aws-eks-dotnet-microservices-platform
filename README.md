@@ -263,7 +263,7 @@ aws-eks-dotnet-microservices-platform
 │
 ├── .github
 │   └── workflows
-│       └── eks-ci-cd.yml
+│       └── eks-ci-cd.yaml
 │
 ├── iam_policy.json
 │
