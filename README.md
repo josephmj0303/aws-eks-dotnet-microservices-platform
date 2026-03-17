@@ -15,8 +15,6 @@ This project demonstrates how to build, containerize, and deploy a **cloud-nativ
 
 The platform showcases a **production-style DevOps architecture** including CI/CD pipelines, container orchestration, autoscaling, ingress routing, infrastructure as code, and observability.
 
-📘 **Deployment guide:** See `docs/deployment-guide.md` for step-by-step infrastructure provisioning and Kubernetes deployment instructions.
-
 ---
 
 # Architecture Overview
@@ -38,9 +36,7 @@ The architecture is designed to simulate **real-world DevOps production environm
 
 Architecture diagram:
 
-```
-docs/architecture/aws-eks-dotnet-platform-architecture.png
-```
+![Architecture-diagram](docs/architecture/aws-eks-dotnet-platform-architecture.png)
 
 ---
 
@@ -185,14 +181,20 @@ aws-eks-dotnet-microservices-platform
 │
 ├── docs
 │   │
+│   ├── deployment-guide.md
+│   │
 │   ├── architecture
 │   │   └── aws-eks-dotnet-platform-architecture.png
 │   │
 │   └── screenshots
+│       ├── ci-cd-workflow.png
 │       ├── eks-cluster.png
-│       ├── pods-running.png
-│       ├── ingress-access.png
-│       └── grafana-dashboard.png
+│       ├── finance-app.png
+│       ├── inventory-app.png
+│       ├── k8s-ingress.png
+│       ├── k8s-pods.png
+│       ├── school-app.png
+│       └── vivahadeepam-app.png
 │
 ├── apps
 │   │
@@ -213,18 +215,11 @@ aws-eks-dotnet-microservices-platform
 │       └── published-dll
 │
 ├── database
-│   │
-│   ├── backups
-│   │   ├── financedb.bak
-│   │   ├── inventorydb.bak
-│   │   ├── schooldb.bak
-│   │   └── vivahadeepamdb.bak
-│   │
 │   └── restore.sql
 │
 ├── kubernetes
-│   │
-│   ├── namespace.yaml
+│   ├── autoscaling
+│   │   └── hpa.yaml
 │   │
 │   ├── database
 │   │   ├── mssql-statefulset.yaml
@@ -247,28 +242,50 @@ aws-eks-dotnet-microservices-platform
 │   │   ├── deployment.yaml
 │   │   └── service.yaml
 │   │
+│   ├── storage
+│   │   └── gp3-storageclass.yaml
+│   │
 │   ├── ingress
 │   │   └── ingress.yaml
 │   │
-│   └── autoscaling
-│       └── hpa.yaml
+│   └── namespace.yaml
 │
 ├── monitoring
-│   ├── prometheus.yaml
-│   └── grafana.yaml
+│   ├── grafana-deploy.yaml
+│   ├── grafana-service.yaml
+│   ├── prometheus-deploy.yaml
+│   └── prometheus-service.yaml
 │
 ├── terraform
 │   ├── vpc.tf
 │   ├── eks-cluster.tf
-│   ├── node-group.tf
 │   └── outputs.tf
 │
 ├── .github
 │   └── workflows
 │       └── eks-ci-cd.yml
 │
+├── iam_policy.json
+│
 └── README.md
 ```
+---
+🧪 Validation Endpoints
+
+CI/CD - Workflow
+![CI/CD - Workflow](docs/screenshots/ci-cd-workflow.png)
+
+EKS - Cluster
+![EKS - Cluster](docs/screenshots/eks-cluster.png)
+
+Ingress Controller
+![Ingress Controller](docs/screenshots/k8s-ingress.png)
+
+Pods Running
+![Pods Running](docs/screenshots/k8s-pods.png)
+
+App Login
+![App Login](docs/screenshots/school-app.png)
 
 ---
 
@@ -298,7 +315,6 @@ This project highlights practical experience with:
 
 * AWS
 * Amazon EKS
-* Amazon RDS
 * VPC Networking
 
 **Containerization**
