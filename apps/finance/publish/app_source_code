@@ -1,0 +1,17 @@
+## Application Source Code (Private)
+
+The application source code has been moved to a private repository 
+to reflect real-world security practices.
+
+Core components included in this project:
+
+- .NET microservices containerized with Docker
+- Kubernetes deployments running on Amazon EKS
+- GitHub Actions CI/CD pipeline
+- DockerHub container registry
+- Amazon RDS PostgreSQL database
+- NGINX / ALB Ingress for traffic routing
+- Prometheus + Grafana monitoring stack
+- Terraform infrastructure provisioning
+
+If required, access can be provided upon request.

@@ -1,5 +1,0 @@
-{
-  "scripts": {
-    "scriptwizard": "node wwwroot/Components/ScriptWizard/Generate-Script-Wizard.js"
-  }
-}
