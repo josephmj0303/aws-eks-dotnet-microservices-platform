@@ -352,6 +352,28 @@ This project highlights practical experience with:
 
 ---
 
+## 🔒 Artifact & Repository Structure
+
+This project follows **production-grade DevOps practices** for a cloud-native microservices platform on AWS.
+
+To maintain proper separation of concerns:
+
+* Compiled application artifacts (`.dll` files) and build outputs are **not stored in this public repository**
+* Runtime artifacts are managed through **CI/CD pipelines and container registries**
+* Sensitive or business-specific components are maintained in **private repositories**
+
+---
+
+## 🚀 Key Takeaway
+
+This repository is designed to reflect **real-world platform engineering practices**, where:
+
+* Source code, infrastructure, and pipelines are public-facing
+* Build artifacts and runtime components are **securely managed outside the codebase**
+* Deployments are fully automated, reproducible, and environment-agnostic
+
+---
+
 # Future Enhancements
 
 Possible improvements for the platform:
