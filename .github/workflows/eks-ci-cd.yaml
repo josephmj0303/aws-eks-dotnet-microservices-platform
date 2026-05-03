@@ -180,4 +180,4 @@ jobs:
         kubectl get svc -n dotnet-microservices
         kubectl get ingress -n dotnet-microservices
 
-
+# secure AWS access using GitHub encrypted secrets
