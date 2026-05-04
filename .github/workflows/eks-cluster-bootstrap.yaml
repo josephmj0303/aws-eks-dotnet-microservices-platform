@@ -1,0 +1,93 @@
+name: Cluster Bootstrap
+
+on:
+  workflow_dispatch:
+
+env:
+  AWS_REGION: us-east-1
+  CLUSTER_NAME: dotnet-microservices
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+
+    - name: Install kubectl
+      uses: azure/setup-kubectl@v4
+
+    - name: Install Helm
+      uses: azure/setup-helm@v4
+
+    - name: Update kubeconfig
+      run: |
+        aws eks update-kubeconfig \
+          --region $AWS_REGION \
+          --name $CLUSTER_NAME
+
+# -----------------------------
+# Install AWS Load Balancer Controller
+# -----------------------------
+
+    - name: Add Helm repo (EKS)
+      run: |
+        helm repo add eks https://aws.github.io/eks-charts
+        helm repo update
+
+    - name: Install/Upgrade AWS Load Balancer Controller
+      run: |
+        helm upgrade --install aws-load-balancer-controller eks/aws-load-balancer-controller \
+          -n kube-system \
+          --create-namespace \
+          --set clusterName=$CLUSTER_NAME \
+          --set region=$AWS_REGION \
+          --set serviceAccount.create=true
+
+    - name: Wait for ALB Controller Deployment
+      run: |
+        kubectl rollout status deployment/aws-load-balancer-controller \
+          -n kube-system --timeout=180s
+
+    - name: Wait for ALB Webhook Readiness
+      run: |
+        echo "Waiting for webhook endpoints..."
+        until kubectl get endpoints aws-load-balancer-webhook-service \
+          -n kube-system \
+          -o jsonpath='{.subsets[0].addresses[0].ip}' 2>/dev/null; do
+          echo "Webhook not ready..."
+          sleep 5
+        done
+        echo "Webhook ready"
+
+# -----------------------------
+# Install Metrics Server
+# -----------------------------
+
+    - name: Add Metrics Server repo
+      run: |
+        helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server
+        helm repo update
+
+    - name: Install/Upgrade Metrics Server
+      run: |
+        helm upgrade --install metrics-server metrics-server/metrics-server \
+          -n kube-system \
+          --set args="{--kubelet-insecure-tls}"
+
+# -----------------------------
+# Verification (Important)
+# -----------------------------
+
+    - name: Verify Addons
+      run: |
+        kubectl get pods -n kube-system
+        kubectl get deployment -n kube-system
