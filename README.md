@@ -19,7 +19,7 @@ The platform showcases a **production-style DevOps architecture** including CI/C
 
 ---
 
-# Architecture Overview
+## Architecture Overview
 
 This platform follows a **modern cloud-native microservices architecture** deployed on **Amazon Elastic Kubernetes Service (EKS)**.
 
@@ -42,7 +42,7 @@ Architecture diagram:
 
 ---
 
-# High Level Platform Flow
+## High Level Platform Flow
 
 ```
 Developer
@@ -72,7 +72,7 @@ GitHub Actions Pipeline
 
 ---
 
-# CI/CD Pipeline Flow
+## CI/CD Pipeline Flow
 
 The CI/CD pipeline is implemented using **GitHub Actions**.
 
@@ -101,7 +101,7 @@ Pipeline capabilities:
 
 ---
 
-# Infrastructure Architecture
+## Infrastructure Architecture
 
 The infrastructure is provisioned using **Terraform**.
 
@@ -143,7 +143,7 @@ Key infrastructure components:
 
 ---
 
-# Kubernetes Deployment Architecture
+## Kubernetes Deployment Architecture
 
 All services are deployed within a Kubernetes namespace.
 
@@ -176,7 +176,7 @@ Kubernetes resources used:
 
 ---
 
-# Repository Structure
+## Repository Structure
 
 ```
 aws-eks-dotnet-microservices-platform
@@ -293,7 +293,7 @@ App Login
 
 ---
 
-# What This Project Demonstrates
+## What This Project Demonstrates
 
 This project showcases several **modern DevOps and cloud-native engineering practices**.
 
@@ -311,7 +311,7 @@ This architecture reflects **real-world DevOps deployment patterns used in moder
 
 ---
 
-# Skills Demonstrated
+## Skills Demonstrated
 
 This project highlights practical experience with:
 
@@ -374,7 +374,7 @@ This repository is designed to reflect **real-world platform engineering practic
 
 ---
 
-# Future Enhancements
+## Future Enhancements
 
 Possible improvements for the platform:
 
@@ -387,7 +387,7 @@ Possible improvements for the platform:
 
 ---
 
-# Author
+## Author
 
 DevOps Engineer Portfolio Project
 
